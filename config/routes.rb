@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   get 'pictures/:id' => 'pictures#showById', as: 'picture'
 
+  get 'pictures/:id/edit' => 'pictures#editById', as: "edit_picture"
+  patch 'pictures/:id' => 'pictures#update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
