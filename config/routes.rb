@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   get 'pictures' => 'pictures#index'
 
+  get 'pictures/new' => 'pictures#new'
+  post 'pictures' => 'pictures#save'
+
   get 'pictures/:id' => 'pictures#showById', as: 'picture'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
